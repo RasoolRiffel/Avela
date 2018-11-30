@@ -1,0 +1,71 @@
+
+//
+// Site content max-width
+@mixin max_site_width{ 
+    max-width: $xl; 
+}
+
+// 
+// Positioning
+@mixin horizontal_center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin position_both_center{ //Immediate parent has to be set to "overflow auto"
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+//
+// Gutters
+@mixin p_tblr($r_padding, $r_padding, $b_padding, $l_padding){
+    padding-top: $t_padding;
+    padding-right: $r_padding;
+    padding-bottom: $b_padding;
+    padding-left: $l_padding;
+}
+@mixin p_xy($padding){
+    padding-top: $padding;
+    padding-bottom: $padding;
+    padding-left: $padding;
+    padding-right: $padding;
+}
+@mixin p_x($x_padding){
+    padding-left: $x_padding;
+    padding-right: $x_padding;
+}
+
+@mixin p_lr($l_padding, $r_padding){
+    padding-left: $t_padding;
+    padding-right: $b_padding;
+}
+@mixin p_y($y_padding){
+    padding-top: $y_padding;
+    padding-bottom: $y_padding;
+}
+@mixin p_tb($t_padding, $b_padding){
+    padding-top: $t_padding;
+    padding-bottom: $b_padding;
+}
+
+//
+// Shapes
+@mixin shape_square($square_size){ 
+    width: $square_size; 
+    height: $square_size; 
+}
+
+//
+// Transisions
+@mixin transition($transition_property, $transition_duration, $transition_timing_function, $transition_delay){ 
+    transition: $transition_property, $transition_duration, $transition_timing_function, $transition_delay;
+    -webkit-transition: $transition_property, $transition_duration, $transition_timing_function, $transition_delay;
+    -moz-transition: $transition_property, $transition_duration, $transition_timing_function, $transition_delay;
+    -ms-transition: $transition_property, $transition_duration, $transition_timing_function, $transition_delay; 
+}

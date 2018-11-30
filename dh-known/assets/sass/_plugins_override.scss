@@ -1,0 +1,180 @@
+
+
+//
+// Gravity Forms
+.gform_wrapper{
+	margin: 0 !important;
+	> form{
+		font-family: "Karla", Helvetica, Arial, Sans-Serif;
+		//
+		// Heading
+		.gform_heading{
+			// margin-bottom: 0;
+			.gform_title{
+				// color: $white;
+				// font-size: 1rem;
+				// margin-bottom: 0;
+				// margin-top: 0;
+				// padding-bottom: 0;
+				@media (min-width: $md){
+					// font-size: 1.25rem;
+				}
+			}			
+		}
+
+		//
+		// Error Heading
+		.validation_error{
+			// border: none !important;
+			// margin-bottom: 0 !important;
+			// color: $red !important;
+		}
+
+		//
+		// Body
+		.gform_body{
+			.gform_fields{
+				@media (min-width: $md){
+					// margin-right: -16px !important;
+				}
+				.gfield{
+			    	// margin-top: 0;
+			    	// padding-top: 16px;
+					&.gfield-md-4{
+						@media (min-width: $md){
+							// width: 33.33333%;
+							// float: left;
+	    					// clear: none;
+	    				}
+					}
+					&.fld-md-6{
+						@media (min-width: $md){
+							width: 50%;
+							float: left;
+	    					clear: none;
+						}
+					}
+
+					&.gfield_error{
+						width: 100%;
+					    padding-left: 15px;
+					    padding-right: 15px;
+					    border: 2px solid $red;
+					    background-color: transparentize($grey, 0.85);
+					    border-radius: 5px;
+					    .gfield_label{
+					    }
+					    .validation_message{
+					    	color: $red;
+					    }
+					}
+					.gfield_label{
+				    	font-weight: 700;
+						margin-bottom: 0;
+						.gfield_required{
+							color: $grey;
+						}
+					}
+					.ginput_container{
+						input{
+							&[type="text"],
+							&[type="email"],
+							&[type="url"],
+							&[type="password"],
+							&[type="search"],
+							&[type="number"],
+							&[type="tel"],
+							&[type="range"],
+							&[type="date"],
+							&[type="month"],
+							&[type="week"],
+							&[type="time"],
+							&[type="datetime"],
+							&[type="datetime-local"],
+							&[type="color"]{
+								outline: none;
+								border-radius: 5px;
+								border: 2px solid $brown !important;
+								appearance: textfield;
+								-moz-appearance: textfield;
+								-webkit-appearance: textfield;
+								padding: 5px 12px !important;
+								@media (min-width: $md){
+									padding: 10px 12px !important;
+								}
+								::placeholder,
+								:-ms-input-placeholder,
+								::-ms-input-placeholder {
+							    	// color: $red;
+								}
+								&:focus {
+									border-color: $blue !important;
+								    background-color: rgba(197, 194, 156, 0.12156862745098039) !important;
+								}
+							}
+						}
+						textarea {
+							border-radius: 5px;
+							padding: 5px 12px !important;
+							border: 2px solid $brown;
+							outline: none;
+							@media (min-width: $md){
+								padding: 10px 12px !important;
+							}
+							&:focus {
+								border: 2px solid $blue;
+							    background-color: rgba(197, 194, 156, 0.12156862745098039) !important;
+							}
+						}
+					}
+					.prvy-seal{
+						width: 260px;
+						max-width: 100%;
+						margin: 0 auto;
+						@media (min-width: $md){
+							width: 300px;
+							margin-left: 0;
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// Footer
+		.gform_footer{
+			margin-top: 0;
+			padding-bottom: 0;
+			text-align: center;
+			@media (min-width: $md){
+				text-align: right;
+				margin-top: -15px;
+			}
+			@media (min-width: $lg){
+				text-align: right;
+				margin-top: -55px;
+			}
+			input{
+				&[type="submit"]{
+					margin-bottom: 0;
+					width: 140px;
+					text-transform: uppercase;
+			    	border-radius: 5px;
+			    	line-height: 1 !important;
+			    	min-height: 2rem;
+					&:hover{
+						color: $white;
+					}
+				}
+			}
+			.gform_ajax_spinner{
+			    margin: 0 auto;
+			    padding-top: 10px;
+			    padding-right: 10px;
+			}
+		}
+	}
+}
+.gform_confirmation_wrapper{
+	// color: $color_accent_2;
+}

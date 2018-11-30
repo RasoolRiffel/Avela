@@ -1,0 +1,206 @@
+
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	@include transition(background-color, 0.3s, ease, 0s);
+	@include transition(border, 0.3s, ease, 0s);
+	outline: none;
+	border: 2px solid $brown;
+	border-radius: 5px;
+	appearance: textfield;
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	padding: 5px 12px !important;
+	@media (min-width: $md){
+		padding: 10px 12px !important;
+	}
+	&:focus {
+		border-color: $blue;
+	    background-color: rgba(197, 194, 156, 0.12156862745098039);
+	}
+}
+
+select {
+	border: 2px solid $brown;
+	padding: 5px 12px !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: url('../img/icon-arrow-down.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 12px 21px;
+	background-position: 99% 6px;
+	outline: none;
+	width: 100%;
+	background-color: transparent;
+	@media (min-width: $md){
+		padding: 10px 12px !important;
+	}
+	&:focus {
+		border-color: $blue;
+	    background-color: rgba(197, 194, 156, 0.12156862745098039);
+	}
+}
+
+textarea {
+	width: 100%;
+	appearance: textarea;
+	-moz-appearance: textarea;
+	-webkit-appearance: textarea;
+}
+
+form{
+	&.srch-frm{
+		.frm-innr{
+			position: relative;
+			padding-right: 34px;
+		}
+		input{
+			&[type="text"],
+			&[type="email"],
+			&[type="url"],
+			&[type="password"],
+			&[type="search"],
+			&[type="number"],
+			&[type="tel"],
+			&[type="range"],
+			&[type="date"],
+			&[type="month"],
+			&[type="week"],
+			&[type="time"],
+			&[type="datetime"],
+			&[type="datetime-local"],
+			&[type="color"]{
+				width: 100%;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				border-color: $grey;
+				@media (min-width: $md){
+					border-top-left-radius: 9px;
+					border-bottom-left-radius: 9px;
+				}
+				&:focus{
+					background-color: transparent;
+					border-color: $blue;
+				}
+			}
+		}
+		.srch-sbmt{
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			position: absolute;
+			border: none;
+			background-color: $brown;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			font-size: 16px;
+			padding: 0 10px;
+			&:hover{
+				background-color: $blue;
+			}
+			.icn{
+				color: $white;
+			}
+		}
+		.search-results &{
+			.frm-innr{
+				padding-right: 0;
+			}
+			.frm-col{
+				padding-bottom: 15px;
+				&.prprty-lctn{
+					.lbl{
+						background-image: url('../img/Denise-Huxham-Categories-Icon-w-3.2.png');
+					}
+				}
+				&.prprty-tpe{
+					.lbl{
+						background-image: url('../img/Denise-Huxham-Categories-Icon-w-2.2.png');
+					}
+				}
+				&.prprty-prce-rnge{
+					.lbl{
+						background-image: url('../img/Denise-Huxham-rand-Icon-w.png');
+					}
+				}
+				.form-check{
+					@include p_y(5px);
+					@media (min-width: $lg){
+					    margin-left: 15px;
+					}
+				}
+			}
+			.lbl{
+				&.chce-lbl{
+					color: $white;
+					background-color: $brown;
+					margin-left: 0;
+					margin-right: 0;
+					border-radius: 5px;
+				    margin-bottom: 10px;
+				    padding: 13px 15px 13px 35px;
+				    line-height: 1;
+					background-repeat: no-repeat;
+				    background-position: 5px center;
+				    background-size: 20px;
+			    	@media (min-width: $sm){
+			    		max-width: 400px;
+			    	}
+			    	@media (min-width: $md){
+			    		max-width: 100%;
+			    	}
+			    	@media (min-width: $lg){
+			    		padding: 13px 15px 13px 50px;
+			    		background-position: 15px center;
+			    	}
+				}
+				&.fld-lbl{
+					margin-bottom: 0;
+				}
+		    }
+		    input{
+		    	&[type="radio"]{
+		    		margin-top: 0.1rem;
+			    	@media (min-width: $lg){
+			    		margin-top: 0;
+			    	}
+		    	}
+		    }
+		    .bttn {
+    		    padding-top: .3125rem;
+			    padding-bottom: .3125rem;
+			    border-radius: 5px;
+			    padding-left: 1rem;
+			    padding-right: 1rem;
+			    font-size: 0.75rem;
+		    	&.srch-sbmt{
+	    		    border-top-left-radius: 5px;
+    				border-bottom-left-radius: 5px;
+		    		position: static;
+				    padding-left: 1rem;
+				    padding-right: 1rem;
+				    border: 2px solid $brown;
+				    &:hover{
+				    	border-color: $white;
+				    }
+		    	}
+	    	} 
+		}
+	}
+}

@@ -1,0 +1,270 @@
+
+
+//
+//Italics
+em,
+.em,
+.itlc{
+    font-style: italic;
+}
+
+//
+//Bold text
+.bld,
+.strng,
+strong{
+	font-weight: 700;
+}
+
+//
+// Page width sections
+.pge-sctn{
+	@include p_x(15px);
+	@include max_site_width;
+	@include horizontal_center;
+	padding-bottom: 2.188rem;
+	max-width: $xl;
+	@media (min-width: $lg){
+		padding-bottom: 4.063rem;
+	}
+	&.hro-sctn{
+		@include p_x(0 !important);
+		max-width: none;
+	}
+
+	.sctn-innr{
+		@include p_y(1.75rem);
+		@include p_x(15px);
+		border-radius: 15px;
+		@media (min-width: $md){
+			@include p_y(2.188rem);
+			@include p_x(30px);			
+		}
+		@media (min-width: $xl){
+			@include p_x(4.063rem);		
+		}
+		&.sctn-innr-sld{
+			@media (min-width: $md){
+				margin: 0 35px;
+			}
+			@media (min-width: $lg){
+				margin: 0 65px;
+			}
+		}
+		> h2,
+		> .h2{
+			color: $white;
+		}
+	}
+}
+
+//
+// Block images
+.blck-img{
+   	@include horizontal_center;
+   	display: block;
+   	width: 100%;
+   	max-width: $xs;
+   	img{
+   		width: 100%;
+   	}
+}
+.blck-icn {
+   	@include horizontal_center;
+   	display: block;
+   	width: 100%;
+   	max-width: 70px;
+}
+
+//
+//Hover Overlay Boxes
+.hvr-ovrly-bx{
+	@media (min-width: $lg){
+		position: relative;
+		overflow: hidden;
+	}
+	&:before,
+	&:after{
+		@include transition(all, 0.25s, lenear, 0s);
+		content: '';
+		display: block;
+		@media (min-width: $lg){
+			position: absolute;
+			left: 15px;
+			right: 15px;
+			z-index: 1;
+			background-color: transparent;
+			opacity: 0;
+
+		}
+	}
+	&:before{
+		@media (min-width: $lg){
+			top: 15%;
+			bottom: 50%;
+		}
+	}
+	&:after{
+		@media (min-width: $lg){
+			top: 50%;
+			bottom: 15%;
+		}
+	}
+	&:hover{
+		&:before,
+		&:after{
+			@media (min-width: $lg){
+				left: 0;
+				right: 0;
+				background-color: transparentize($black, 0.35);
+				opacity: 1;				
+			}
+		}
+		&:before{
+			@media (min-width: $lg){
+				top: 0;
+				bottom: 50%;
+			}
+		}
+		&:after{
+			@media (min-width: $lg){
+				top: 50%;
+				bottom: 0;
+			}
+
+		}
+		.hvr-ovrly{
+			@media (min-width: $lg){
+				@include transition(opacity, 0.2s, ease, 0.1s);
+				@include transition(top, 0.3s, ease, 0s);
+				opacity: 1;
+				z-index: 5;
+				color: $white;
+				top: 0;
+			}
+		}
+		img{
+			@media (min-width: $lg){
+				transform: scale(1.10);
+				-ms-transform: scale(1.10);
+				-webkit-transform: scale(1.10);
+			}
+		}
+	}
+	.hvr-ovrly{
+		@include transition(all, 0.2s, ease, 0.1s);
+		@media (min-width: $lg){
+			@include p_x(15px);
+			@include p_y(15px);
+			position: absolute;
+			opacity: 0;
+			top: 25%;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		.hvr-ovrly-cntnt{
+			@media (min-width: $lg){
+				@include position_both_center;
+				width: calc(100% - 30px);
+			}
+		}
+	}
+	img{
+		@include transition(all, 0.5s, ease-in-out, 0s);
+	}
+
+	.mre-lnk{
+		color: $color_link;
+		&:hover{
+			border-bottom: 3px solid $color_link;
+		}
+	}
+}
+
+//
+// Font Awesome 5.0.13
+.icn{
+	color: $blue;
+	&.scl-icn{
+		@include transition(all, 0.2s, ease, 0s);
+	}
+	// transition: 0.3s;
+	// -webkit-transition: 0.3s;
+	// -moz-transition: 0.3s;
+	// -ms-transition: 0.3s;
+	// color: $grey;
+	// a:hover &{
+	// 	&.fa-twitter{
+	// 		color: #00a3e0 !important;
+	// 		&:hover{		
+	// 			color: #00a3e0 !important;
+	// 		}
+	// 	}
+	// 	&.fa-instagram{
+	// 		color: #000000 !important;
+	// 		&:hover{
+	// 			color: #000000 !important;		
+	// 		}
+	// 	}
+	// 	&.fa-facebook{
+	// 		color: #4152b2 !important;
+	// 		&:hover{
+	// 			color: #4152b2 !important;
+	// 		}
+	// 	}
+	// 	&.fa-linkedin{
+	// 		color: #0077B5 !important;
+	// 		&:hover{
+	// 			color: #0077B5 !important;
+	// 		}
+	// 	}
+	// 	&.fa-youtube-play{
+	// 		color: #ff0000 !important;
+	// 		&:hover{
+	// 			color: #ff0000 !important;
+	// 		}
+	// 	}
+	// }
+	// &.fa-times-thin{
+	// 	font-size: 1.5315rem;
+	// 	margin-top: -10px;
+	// 	&:before {
+	// 	    content: '\00d7';
+	// 	}
+	// 	&:hover{
+	// 		color: $red;
+	// 	}
+	// }
+}
+
+//
+// Square columns
+.blck-square-col{
+	position: relative;
+	&:before{
+		content: '';
+		display: block;
+		padding: 50%;
+	}
+	.blck-square{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+
+//
+// Avance Custom Fields Maps
+.acf-map {
+	width: 100%;
+	height: 250px;
+	border: none;
+	margin: 0 0 1.25rem;
+	img {
+		max-width: inherit !important; /* fixes potential theme css conflict */
+	}
+}

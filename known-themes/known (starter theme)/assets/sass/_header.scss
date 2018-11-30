@@ -1,0 +1,16 @@
+
+//
+// Master
+header.mstr-hdr{
+	background-color: transparentize($black, 0.75);
+    .ste-hdr{
+		@include max_site_width;
+		@include horizontal_center;
+    }
+}
+
+//
+// Menu
+
+//
+// Banners

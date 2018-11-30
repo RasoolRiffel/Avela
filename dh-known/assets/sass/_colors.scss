@@ -1,0 +1,38 @@
+
+//
+// Defaults
+$silver: #c0c0c0;
+$purple: #800080;
+$black: #000000; 
+$white: #ffffff;
+$green: #00b0b0;
+$navy: #000080;
+$blue: #6695e2;
+$grey: #666666;
+$red: #ff0000;
+
+//
+// Site colours
+$brown: #4d4d4d;
+
+//
+// Headings
+$color_h1: $black;
+$color_h2: $black;
+$color_h3: $black;
+$color_h4: $black;
+$color_h5: $black;
+$color_h6: $black;
+
+//
+// Text
+$color_text: $grey;
+$color_text_light: $silver;
+$color_text_strong: $black;
+
+//
+// Linkc
+$color_link: $blue;
+$color_link_hover: lighten($color_link, 10%);
+$color_link_active: $color_link;
+$color_link_focus: $color_link_hover;

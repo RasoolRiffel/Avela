@@ -1,0 +1,37 @@
+
+a.bttn,
+button,
+.button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"]{
+	@include transition (all, 0.3s, ease, 0s)
+	@include p_y( 0.3125rem);
+	@include p_x( 1rem);
+	-webkit-appearance: unset;
+	font-family: "Karla", Helvetica, Arial, Sans-Serif;
+	font-weight: 700;
+	outline: none !important;
+	line-height: 1;
+	color: $white;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 0.75rem;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border: 2px solid $color_link;
+	background-color: $color_link;
+	@media (min-width: $lg){
+		@include p_tb(0.625rem, 0.625rem);
+		@include p_x(1.5rem);
+		font-size: 0.875rem;
+		border-radius: 9px;
+	}
+	&:active,
+	&:hover {
+		color: $white;
+		border: 2px solid $white;
+		background-color: lighten($color_link, 10%);
+	}
+}

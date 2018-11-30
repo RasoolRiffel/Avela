@@ -1,0 +1,27 @@
+
+a.bttn,
+button,
+.button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"]{
+	@include transition (all, 0.3s, ease, 0s)
+	@include p_y(0.9375rem);
+	@include p_tb(0.1875rem,0.25rem);
+	outline: none;
+	line-height: 1;
+	color: $color_link;
+	border-radius: 3px;
+	text-align: center;
+	font-size: 0.875rem;
+	text-decoration: none;
+	display: inline-block;
+	border: 2px solid $color_link;
+	background-color: transparent;
+	&:active,
+	&:hover {
+		color: $color_text_light;
+		border-color: transparent;
+		background-color: $color_link;
+	}
+}

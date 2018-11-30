@@ -1,0 +1,46 @@
+
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: $color_text;
+	border: 1px solid $color_text_light;
+	border-radius: 2px;
+	padding: 3px;
+	appearance: textfield;
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	&:focus {
+		border: 1px solid $color_text;
+		background-color: $color_text_light;
+	}
+}
+
+select {
+	border: 1px solid $color_text_light;
+	background-image: url('../img/select-field-gb-sprite.png')
+	&:focus {
+		border: 1px solid $color_text;
+		background-color: $color_text_light;
+	}
+}
+
+textarea {
+	width: 100%;
+	appearance: textarea;
+	-moz-appearance: textarea;
+	-webkit-appearance: textarea;
+}

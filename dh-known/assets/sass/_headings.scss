@@ -1,0 +1,86 @@
+
+h1,
+.h1{
+    font-family: "Karla", Helvetica, Arial, Sans-Serif;
+	font-weight: 700;
+	font-size: 25px;
+	margin-bottom: 0;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	// color: $black;
+	@media (min-width: $md){
+		font-size: 35px;
+	}
+	@media (min-width: $lg){
+		font-size: 45px;
+		padding-bottom: 20px;
+	}
+	&.pge-ttl{
+		text-align: center;
+		padding-top: 0
+	}
+}
+
+h2,
+.h2{
+    font-family: "Karla", Helvetica, Arial, Sans-Serif;
+	font-weight: 700;
+	font-size: 22px;
+	padding-top: 5px;
+	padding-bottom: 15px;
+	margin-bottom: 0;
+	// color: $color_text_strong;
+	@media (min-width: $lg){
+		font-size: 30px;
+		padding-bottom: 20px;
+	}
+}
+
+h3,
+.h3{
+    font-family: "Karla", Helvetica, Arial, Sans-Serif;
+	font-weight: 700;
+	font-size: 20px;
+	padding-top: 3px;
+	padding-bottom: 10px;
+	margin-bottom: 0;
+	// color: $color_text_strong;
+	@media (min-width: $lg){
+		font-size: 25px;
+		padding-top: 5px;
+		padding-bottom: 15px;
+	}
+}
+
+h4,
+.h4{
+    font-family: "Montserrat", Helvetica, Arial, Sans-Serif;
+	font-weight: 700;
+	padding-top: 0;
+	font-size: 14px;
+	padding-bottom: 0	;
+	// color: $color_text_strong;
+	@media (min-width: $lg){
+		font-size: 1rem;
+	}
+}
+
+h5{
+    font-family: "Montserrat", Helvetica, Arial, Sans-Serif;
+	font-weight: 700;
+	font-size: 14px;
+	padding-bottom: 3px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	// color: $color_text_strong;
+}
+
+h6{
+    font-family: "Karla", Helvetica, Arial, Sans-Serif;
+	font-weight: 700;
+	font-size: 12px;
+	padding-bottom: 3px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	// color: $color_text_strong;
+}

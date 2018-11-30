@@ -1,0 +1,101 @@
+
+//
+//	Modals
+.modal{
+	.close {
+		&:hover{
+		}
+	}
+	.modal-header {
+	}
+     .modal-body{
+     }
+	.modal-footer{
+	    .button{
+	    		&:hover{
+	    		}
+	    }
+	}
+}
+
+//
+//	Custom Gallery
+.btstrp-gllry{
+	&.carousel{
+		&.modal{
+			position: fixed; // Needed because the carousel overrides the position property
+			.modal-dialog {
+			    	margin: 0.9375rem;
+			    	@media (min-width: $sm){
+			    		margin: 1.875rem 3.75rem;
+			    		max-width: 100%;
+			    	}
+			    	@media (min-width: $md){
+			    		margin: 1.875rem 7.5rem;
+			    	}
+			    	@media (min-width: $xl){
+			    		max-width: 1140px;
+			    		margin: 1.875rem auto;
+			    	}
+				.modal-content{
+					background-color: transparent;
+					border: none;
+					.modal-header{
+						padding: 0 1rem;
+						border: none;
+						.close{
+							color: $white;
+							text-shadow: none;
+					    	    	opacity: 1;
+						    	// font-weight: 300;
+						}
+					}
+					.carousel-control{
+						width: 20px;
+						opacity: 1;
+						&.carousel-control-prev{
+						    left: -10px;
+						    	@media (min-width: $sm){
+						    		left: -30px;
+						    	}
+						}
+						&.carousel-control-next{
+						    right: -10px;
+						    	@media (min-width: $sm){
+						    		right: -30px;
+						    	}
+						}
+					}
+					.carousel-indicators{
+						bottom: -65px;
+						li{
+							height: auto;
+							width: auto;
+							&.active{
+								img{
+									border-color: $red;
+								}
+							}
+							img{
+								max-width: 25px;
+								border: 2px solid $white;
+							    	@media (min-width: $lg){
+							    		max-width: 50px;
+							    	}
+							}
+						}
+						
+					}
+				}
+			}
+		}
+	}
+}
+.modal-backdrop{
+	&.show{
+		opacity: 0.85;
+	}
+}
+
+//
+//	Carousels

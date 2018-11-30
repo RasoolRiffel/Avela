@@ -1,0 +1,24 @@
+
+//
+// Page width sections
+.pge-sctn{
+	@include max_site_width;
+	@include horizontal_center;
+
+	&.wth-sdbr{
+		.mn-clmn{
+
+		}
+		@import 'sidebars';
+	}
+}
+
+//
+// Template specific
+.home{
+
+}
+
+.single{
+
+}

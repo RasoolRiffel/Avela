@@ -1,0 +1,337 @@
+
+//
+// Master
+header.mstr-hdr{
+}
+.ste-hdr{
+	.hdr-mble-cntcts{
+		font-size: 12px;
+		@media (min-width: $md){
+			font-size: 14px;
+		}
+		> span {
+			@media (min-width: $sm){
+				text-align: right;
+			}
+			&:last-child{
+				text-align: right;
+				max-width: 155px;
+				@media (min-width: $md){
+					max-width: 175px;
+				}
+			}
+		}
+		.icn{
+			display: none;
+			@media (min-width: $sm){
+				display: inline-block;
+				margin-right: 3px;
+			}
+		}
+	}
+
+	.hdr-lgo {
+		position: relative;
+	    @media (min-width: $lg){
+	        max-width: 185px;
+		}
+		.custom-logo-link{
+			max-width: 120px;
+			display: block;
+		    @media (min-width: $md){
+		        max-width: 168px;
+			}
+		}
+	}
+
+	.hdr-mble-scl{
+		position: absolute;
+		top: 5px;
+		right: 15px;
+		font-size: 1rem;
+	    line-height: 1;
+		a{
+			margin-left: 5px;
+		}
+	}
+
+	.tggl-bttn{
+		position: absolute;
+		bottom: -2px;
+		right: 11px;
+		border-bottom: 0;
+		line-height: 1;
+		z-index: 5;
+		.tggl-bttn-innr{
+			display: block;
+			position: relative;
+			padding-left: 45px;
+		}
+		.bttn-txt{
+			font-size: 12px;
+			position: absolute;
+			bottom: 7px;
+			left: 0;
+			color: $blue;
+		}
+		.icn{
+			font-size: 28px;
+		}
+	}
+
+	.dsktp-hdr-scl{
+	    max-width: 280px;
+	    p{
+	    	padding-bottom: 8px;
+			&.hdr-scl{
+			    margin-bottom: 10px;
+			    @media (min-width: $lg){
+			    	margin-bottom: 0;
+			    	margin-top: 10px;
+			    }
+				a{
+					margin-left: 8px;
+				}
+			}
+	    }
+	}
+
+	.hdr-cntct{
+		font-size: 15px;
+	}
+
+	a{
+		color: $grey;
+		&:hover{
+			color: $blue;
+		}
+	}
+}
+
+
+//
+// Menu
+.menu-nav-menu{
+	&.main-nav-menu{
+		// display: none;
+		padding-left: 0;
+		padding-bottom: 0;
+	// 	padding-bottom: 10px;
+		@media (min-width: $lg){
+        	display: table;
+        	margin-left: auto;
+        	margin-right: 0;
+			margin-top: 64px;
+		}
+		&.nav-menu-open{
+			padding-top: 15px;
+			@media (min-width: $lg){
+				padding-top: 0;
+			}
+		}
+		&.nav-menu-open{
+			margin-top: -15px;
+			@media (min-width: $lg){
+				margin-top: 64px;
+			}
+		}
+		> li{
+	    	@include transition(all, 0.5s, ease, 0s);
+			display: none;
+			list-style: none;
+			padding: 5px 0;
+		    @media (min-width: $lg){
+				padding-bottom: 0;
+		        display: block;
+				padding-top: 0;
+		        float: left;
+		        border-bottom: 0;
+		        margin: 0 30px;
+   			}
+   			&:hover{
+				> a{					
+					&:after {
+						@media (min-width: $lg){
+							height: 3px;
+							bottom: 0;
+						}
+					}
+				}
+   			}
+   			&:last-child{
+   				padding-bottom: 0;
+			    @media (min-width: $lg){
+			        margin-right: 0;
+			    }
+   			}
+   			&.current-menu-item{
+   				> a {
+   					color: $blue;
+   				}
+   			}
+   			.single-post &.current_page_parent{
+   				> a {
+   					color: $blue;
+   				}
+   			}
+   			.single-known_property &.menu-item-object-known_property{
+   				> a {
+   					color: $blue;
+   				}
+   			}
+			> a{
+				color: $grey;
+				@media (min-width: $lg){
+					padding-bottom: 5px;
+					display: block;
+					position: relative;
+				}
+				&:hover {
+					color: $blue;
+				}
+				&:after {
+					@include transition(all, 0.3s, ease, 0s);
+					content: '';
+					display: block;
+					background-color: $blue;
+					position: absolute;
+					height: 0;
+					width: 100%;
+					bottom: 3px;
+					left: 0;
+				}
+   			}
+		}
+	}
+}
+
+
+
+//
+// Page Banners
+.pge-bnnr-sctn{
+	padding-bottom: 40px;
+	@media (min-width: $lg){
+		padding-bottom: 60px;
+	}
+}
+.pge-bnnr{
+	.snglr-pst &{
+		background-color: rgba(197, 194, 156, 0.20);
+		max-height: 250px;
+	}
+	.snglr-pst.has-bnnr-img &{
+		background-color: transparent;
+		max-height: none;
+	}
+	&.sldr-pge-bnnr{
+		.carousel-item{
+			height: 250px;
+			@media (min-width: $md){
+				height: 330px;
+			}
+			@media (min-width: $lg){
+				height: 430px;
+			}
+			@media (min-width: $xl){
+				height: 500px;
+			}
+        }
+        .carousel-caption{
+        	@include p_xy (15px);
+        	background-color: transparentize($black, 0.5);
+        	left: 20px;
+        	right: 20px;
+        	@media (min-width: $md){
+        		@include translate_y(50%);
+        		border-radius: 15px;
+        		bottom: 50%;
+	        	left: 15%;
+	        	right: 15%;
+        	}
+        	@media (min-width: $lg){
+        		@include translate_y(0);
+        		@include p_xy (20px);
+        		bottom: 40px;
+	        	left: 30px;
+	        	right: auto;
+	        	width: 380px;
+	        	text-align: left;
+        	}
+        	@media (min-width: $xl){
+        		// @include translate_x(calc(50vw - 575px));
+        		@include translate_x(-575px);  
+	        	left: 50%;
+        	}
+        	@media (min-width: 1370px){
+        		@include translate_x(-600px);  
+	        	left: 50%;
+        	}
+        	h3{
+        		font-size: 18px;
+				@media (min-width: $md){
+					font-size: 22px;
+				}
+				@media (min-width: $lg){
+					font-size: 30px;
+				}
+        	}
+        	p{
+
+        	}
+        	.mre-lnk{
+
+        	}
+        }
+        .sldr-icn {
+        	@include shape_square (15px);
+        	top: auto;
+        	bottom: calc(50% - 7.5px);
+        	bottom: 50%;
+        	background-color: transparentize($black, 0.9);
+        	opacity: 1;
+			background-repeat: no-repeat;
+		    background-size: calc(100% - 4px;);
+			background-image: url('../img/icon-arrow.png');
+			background-position: center;
+        	@media (min-width: $md){
+        		@include shape_square (25px);
+        		background-size: cover;
+        		background-color: transparent;
+        	}
+        	&.carousel-control-prev{
+        		left: 5px;
+        		transform: rotate(180deg);
+	        	@media (min-width: 1370px){  
+		        	left: calc(7.5% - 20px);
+	        	}
+        	}
+        	&.carousel-control-next{
+        		right: 5px;
+	        	@media (min-width: 1370px){  
+		        	right: calc(7.5% - 20px);
+	        	}
+        	}
+        }
+	}
+
+	&.img-pge-bnnr{
+		height: 250px;
+		@media (min-width: $md){
+			height: 330px;
+		}
+		@media (min-width: $lg){
+			height: 410px;
+		}
+		@media (min-width: $xl){
+			height: 450px;
+		}
+	}
+
+    img{                	
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}

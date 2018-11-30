@@ -1,0 +1,5 @@
+
+footer.mstr-ftr{
+	@include max_site_width;
+	@include horizontal_center;
+}

@@ -1,0 +1,97 @@
+
+//
+// Paragraphs
+p{
+	padding-bottom: 0.5rem;
+	@media (min-width: $lg){
+		padding-bottom: 0.9375rem;
+	}
+}
+
+//
+// Links
+a{
+	@include transition(all, 0.3s, ease, 0s);
+	text-decoration: none;
+	color: $color_link; 
+	outline: none;
+	&:hover{
+		text-decoration: none;
+		color: $color_link_hover;		
+	}
+	&:focus{
+		text-decoration: none;
+		color: $color_link_focus; 
+	}
+	&:active{
+		text-decoration: none;
+		color: $color_link_active; 
+	}
+	&.mre-lnk{
+		@include transition(border, 0.12s, ease-in, 0s);
+		&:hover{
+			border-bottom: 3px solid;
+		}
+	}
+}
+
+//
+// Lists
+ul,
+ol{
+	padding-left: 0.9375rem;
+	padding-bottom: 0.9375rem;
+	p{
+		padding-bottom: 0;
+	}
+}
+
+//
+// Images
+img{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+//
+// Forms
+@import 'forms';
+
+//
+//hr
+hr {
+	background-color: $color_text_light;
+	border: 0;
+	height: 1px;
+	margin-bottom: 0.9375rem;
+}
+
+//
+//Blockquotes	
+blockquote{
+	color: $color_text;
+	background-color: $color_text_light;
+	p{
+		font-size: 0.875rem;
+		&:last-child{
+			padding-bottom: 0;
+		}
+	}
+}
+
+//
+// Tables
+@import 'tables';
+
+//
+// Figures
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+//
+// Abbr
+abbr{
+	text-decoration: none;
+}
